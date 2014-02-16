@@ -18,8 +18,8 @@
         document.cookie="showdiv=";
      }
    }  
-  $("#closebtn").click(function(){document.cookie="isshow=";$("#xinhuancontent_scroll").hide();});
-  $("#closebtn_").click(function(){document.cookie="isshow=true";$("#xinhuancontent_scroll").hide();location.href=location.href;});
+  $("#closebtn").click(function(){document.cookie="isshow=";$("#email-all").hide();});
+  $("#closebtn_").click(function(){document.cookie="isshow=true";$("#email-all").hide();location.href=location.href;});
   setTimeout("showdiv()",2000);
 }
 );
@@ -34,9 +34,9 @@ function showdiv()
    {
      if(getck("showdiv") == "")
      {
-        $("#xinhuancontent_scroll").width(document.body.clientWidth);
-        $("#xinhuancontent_scroll").height(document.body.clientHeight);
-        $("#xinhuancontent_scroll").show();
+        $("#email-all").width(document.body.clientWidth);
+        $("#email-all").height(document.body.clientHeight);
+        $("#email-all").show();
      }
      else
      {
@@ -46,9 +46,9 @@ function showdiv()
       if(num >= 24*3600000)//已经过期重新设置
       {
         document.cookie="showdiv=";
-        $("#xinhuancontent_scroll").width(document.body.clientWidth);
-        $("#xinhuancontent_scroll").height(document.body.clientHeight);
-        $("#xinhuancontent_scroll").show();
+        $("#email-all").width(document.body.clientWidth);
+        $("#email-all").height(document.body.clientHeight);
+        $("#email-all").show();
       } 
      }
    }
