@@ -14,7 +14,7 @@
      var data = new Date();
      var num = Number(data.getTime()) - Number(date_.getTime());
      // if(num >= 24*3600000)//已经过期重新设置
-     if(num >= 24*3600000)//已经过期重新设置
+     if(num >= 24*7200000)//已经过期重新设置
      {
         document.cookie="showdiv=";
      }
@@ -26,7 +26,7 @@
 );
 function showdiv()
 { 
-   setTimeout("showdiv()",20000);
+   // setTimeout("showdiv()",20000);
    if(getck("isshow")  == "true")
    {
      return;
