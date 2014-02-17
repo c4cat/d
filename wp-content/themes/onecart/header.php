@@ -20,7 +20,6 @@ load_theme_textdomain('ocart', get_stylesheet_directory().'/lang/');
 </head>
 <body <?php body_class(); ?>>
 
-<input type="button" value="清空cookie测试" onclick="clearcookie()" /><br />
 
 <?php do_action('ocart_after_body_start'); ?>
 
