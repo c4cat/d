@@ -1,0 +1,2 @@
+post_id,post_name,post_author,post_date,post_type,post_status,post_title,post_content,post_category,post_tags,custom_field,post_thumbnail,Brands
+,now,admin,2013-9-13 0:00,product,publish,CSV Import Test,This is a post for csv import.222,dresses,,,http://ww4.sinaimg.cn/large/4a3ecd39jw1ecsd4r0tekj20hs0no42o.jpg,Glitz & Glam
