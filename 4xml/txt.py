@@ -18,15 +18,15 @@ def getLink():
 		print 'please wait...'
 		arr = line.split('|')
 
-		print arr[0]
-		print arr[1]
-		print arr[4]
-		print arr[6]
-		print arr[7]
-		print arr[8]
-		print arr[18]
+		# print arr[0]
+		# print arr[1]
+		# print arr[4]
+		# print arr[6]
+		# print arr[7]
+		# print arr[8]
+		# print arr[18]
 		getData(arr[0],arr[1],arr[4],arr[6],arr[7],arr[8],arr[18])
-		print 'No.'+ str(line[1]) +' is finish'
+		print 'No.'+ str(arr[0]) +' is finish'
 
 	# 
     # hebing('xml/','hebing.xml')
@@ -100,7 +100,7 @@ def createItem(a_title,a_id,a_price,a_old_price,arr_size,a_buylink,stock):
 	item.appendChild(content) 
 
 	# cdata = doc.createCDATASection(a_des)
-	text = doc.createTextNode(a_des)
+	text = doc.createTextNode(" ")
 	# content.appendChild(cdata)
 	content.appendChild(text)
 

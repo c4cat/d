@@ -126,13 +126,29 @@ foreach ($posts as $post): setup_postdata($post);
 							
 						</span>
 					</a>
+					<div class="hover-box">
+						<a href="#"></a>
+						<div id='bt'>
+						<p><?php //the_title(); ?></p>
+						<ul>
+							<li><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;" allowTransparency="true"></iframe></li>
+							<li><a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F&media=http%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a></li>
+							<li><a href="javascript:lightbox(null, '<?php echo get_template_directory_uri(); ?>/ajax/product_lightbox.php', '', '<?php the_ID(); ?>', '<?php echo get_permalink($post->ID); ?>');" id='hover-a'>Details</a></li>
+						</ul>
+						</div>
+					</div>
 				</li>
 
 <?php endforeach; ?>
 
 <script type="text/javascript">
 $(function(){
-
+	$('.catalog_list>li').hover(function(){
+		$(this).find('.hover-box').fadeIn();
+	},function(){
+		// $(this).find('.hover-box').stop();
+		$(this).find('.hover-box').fadeOut();
+	});
 	// preload images
 	$("img.preload").each(function(){
 		var element = $(this);

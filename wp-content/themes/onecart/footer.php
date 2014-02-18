@@ -1,6 +1,8 @@
 <?php wp_footer(); ?>
 
 </div>
+<!-- Please call pinit.js only once per page -->
+<script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
 
 <!-- co2 add  -->
 <link rel="stylesheet" href="<?php bloginfo('template_directory')?>/css/less.css">
