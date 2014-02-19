@@ -12,6 +12,20 @@
 		<wp:status>draft</wp:status>
 		<wp:post_name>Shimmering-Pointy-Closed-Toe-Flattery-Rivet-Embellished-Stiletto-High-Heels-Silver-PU-Pumps</wp:post_name>
 		<wp:post_type>product</wp:post_type>
+		<category domain="product_category" nicename="Shoes">
+<![CDATA[Shoes]]>		</category>
+		<category domain="size" nicename="35">
+<![CDATA[35]]>		</category>
+		<category domain="size" nicename="36">
+<![CDATA[36]]>		</category>
+		<category domain="size" nicename="37">
+<![CDATA[37]]>		</category>
+		<category domain="size" nicename="38">
+<![CDATA[38]]>		</category>
+		<category domain="size" nicename="39">
+<![CDATA[39]]>		</category>
+		<category domain="size" nicename="40">
+<![CDATA[40]]>		</category>
 		<wp:postmeta>
 			<wp:meta_key>seo-title</wp:meta_key>
 			<wp:meta_value>

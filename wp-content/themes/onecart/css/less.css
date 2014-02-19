@@ -166,6 +166,10 @@
   position: relative;
   left: -10px;
 }
+#buy-a {
+  width: 100%;
+  height: 200px;
+}
 .catalog_list li img {
   border: none!important;
 }

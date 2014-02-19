@@ -17,7 +17,7 @@ def getData(theid,title,link,img,oldprice,nowprice,stock):
 	print arrSize
 
 
-	createCsv(theid,img)
+	# createCsv(theid,img)
 	print 'csv is ok!'
 	try:
 		# createItem(title,theid,details,'publish',price,oldprice,groups,buylink,sell)

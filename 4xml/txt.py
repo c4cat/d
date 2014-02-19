@@ -1,5 +1,9 @@
 #ver for txt file
 # shoes-2022 dress-443 notBoth-658
+# 需要解决的,包括
+# 1.不是dress和shoes的时候不生成,
+# 2.子类
+# 3.
 from xml.dom import minidom 
 import traceback 
 
@@ -10,37 +14,56 @@ import sys,csv,re
 from bs4 import BeautifulSoup
 
 def getLink():
-	# csvfile = file('red.csv','rb')
-	# reader = csv.reader(csvfile)
-	txtfile = open('data1-10.txt','r')
+	txtfile = open('data1-500.txt','r')
 
-	# theid = 20000
+	shoes = ['Heels','Sandals','Boots','Booties','Wedges','Flats','Pumps']
+	dress = ['dress','Dress','Dresses','dresses','jumpsuit','jumpsuits','Skirts','rompers','romper']
+
 	for line in txtfile:
 		print 'please wait...'
 		arr = line.split('|')
-		getData(arr[0],arr[1],arr[4],arr[6],arr[7],arr[8],arr[18])
+		arr2 =  arr[1].split(' ')
+		if(set(arr2).intersection(set(shoes))):
+			the_type = 'Shoes'
+			print arr[0]+' is shoessss!'
+		elif(set(arr2).intersection(set(dress))):
+			the_type = 'Dresses'
+			print arr[0]+' is dresssss!'
+		else:
+			the_type = ''
+			print arr[0]+' both not'
+
+		getData(arr[0],arr[1],arr[4],arr[6],arr[7],arr[8],arr[18],the_type)
 		print 'No.'+ str(arr[0]) +' is finish'
 
-	# 
-    # hebing('xml/','hebing.xml')
-    # hebing('csv/','hebing.csv')
 
-def getData(theid,title,link,img,price,oldprice,stock):
-	soup = BeautifulSoup(urllib2.urlopen(link))
+def getData(theid,title,url,img,price,oldprice,stock,the_type):
+	opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookielib.CookieJar()))
+	opener.addheaders = [('User-agent', 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322)')]
+	f = opener.open(url)
+	c = f.read()
+	f.close()
+	# print c
+	reg = re.compile('(?<=replace\(\').*?(?=\'\))',re.S)
+	c = re.findall(reg,c)[0]
+
+	soup = BeautifulSoup(urllib2.urlopen(c))
+
 	getSize = str(soup.find_all("select","size_select"))
 	regGetSize = re.compile('(?<=\"\>).*?(?=\<)',re.S)
 	arrSize = re.findall(regGetSize,getSize)
 	del arrSize[0:2]
 	# print arrSize
 
+
+
 	createCsv(theid,img)
 	print 'csv done!'
 	try:
-		createItem(title,theid,price,oldprice,arrSize,link,stock)
-		print arrSize
+		createItem(title,theid,price,oldprice,arrSize,url,stock,the_type)
 		print 'xml done!'
 	except:
-		print 'no.'+str(theid)+'is worng!'
+		print 'no.'+str(theid)+' is worng!'
 
 
 def createCsv(theid,img):
@@ -53,7 +76,7 @@ def createCsv(theid,img):
 	csvfile.close()
 
 
-def createItem(a_title,a_id,a_price,a_old_price,arr_size,a_buylink,stock):
+def createItem(a_title,a_id,a_price,a_old_price,arr_size,a_buylink,stock,a_type):
 	filename = 'xml/' + str(a_id) + '.xml'
 	f = open(filename, "w") 
 	
@@ -132,6 +155,14 @@ def createItem(a_title,a_id,a_price,a_old_price,arr_size,a_buylink,stock):
 	# item.appendChild(category) 
 	# cdata = doc.createCDATASection('Glitz &amp; Glam')
 	# category.appendChild(cdata)
+
+	if (a_type):
+		category = doc.createElement("category")
+		category.setAttribute("domain", "product_category") 
+		category.setAttribute("nicename", a_type) 
+		item.appendChild(category) 
+		cdata = doc.createCDATASection(a_type)
+		category.appendChild(cdata)
 
 	for i in arr_size:
 		category = doc.createElement("category")

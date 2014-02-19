@@ -90,6 +90,7 @@ foreach ($posts as $post): setup_postdata($post);
 						
 						<?php
 						$status = get_post_meta($post->ID, 'status', true);
+						// $link = get_post_meta($post->ID, 'buylink', true);
 						$mark_as_onsale = get_post_meta($post->ID, 'mark_as_onsale', true);
 						$mark_as_new = get_post_meta($post->ID, 'mark_as_new', true);
 						if ($status == 'sold') {
@@ -127,9 +128,9 @@ foreach ($posts as $post): setup_postdata($post);
 						</span>
 					</a>
 					<div class="hover-box">
-						<a href="#"></a>
+						<a href=""javascript:lightbox(null, '<?php echo get_template_directory_uri(); ?>/ajax/product_lightbox.php', '', '<?php the_ID(); ?>', '<?php echo get_permalink($post->ID); ?>');"" id='buy-a'></a>
 						<div id='bt'>
-						<p><?php //the_title(); ?></p>
+						<p><?php the_title(); ?></p>
 						<ul>
 							<li><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;" allowTransparency="true"></iframe></li>
 							<li><a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F&media=http%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a></li>

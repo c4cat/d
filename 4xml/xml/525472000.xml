@@ -12,6 +12,26 @@
 		<wp:status>draft</wp:status>
 		<wp:post_name>Beauty-PU-Zipper-White-Round-Closed-Toe-Chunky-Super-High-Heel-Mary-Jane-Pumps</wp:post_name>
 		<wp:post_type>product</wp:post_type>
+		<category domain="product_category" nicename="Shoes">
+<![CDATA[Shoes]]>		</category>
+		<category domain="size" nicename="34">
+<![CDATA[34]]>		</category>
+		<category domain="size" nicename="35">
+<![CDATA[35]]>		</category>
+		<category domain="size" nicename="36">
+<![CDATA[36]]>		</category>
+		<category domain="size" nicename="37">
+<![CDATA[37]]>		</category>
+		<category domain="size" nicename="38">
+<![CDATA[38]]>		</category>
+		<category domain="size" nicename="39">
+<![CDATA[39]]>		</category>
+		<category domain="size" nicename="40">
+<![CDATA[40]]>		</category>
+		<category domain="size" nicename="41">
+<![CDATA[41]]>		</category>
+		<category domain="size" nicename="42">
+<![CDATA[42]]>		</category>
 		<wp:postmeta>
 			<wp:meta_key>seo-title</wp:meta_key>
 			<wp:meta_value>

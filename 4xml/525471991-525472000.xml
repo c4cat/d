@@ -19,8 +19,18 @@
 		<wp:status>draft</wp:status>
 		<wp:post_name>Lovely-Round-Closed-Toe-Stiletto-High-Heels-Yellow-Patent-Leather-Pumps</wp:post_name>
 		<wp:post_type>product</wp:post_type>
-		<category domain="brand" nicename="ami-clubwear">
-<![CDATA[AMI Clubwear]]>		</category>
+		<category domain="product_category" nicename="Shoes">
+<![CDATA[Shoes]]>		</category>
+		<category domain="size" nicename="35">
+<![CDATA[35]]>		</category>
+		<category domain="size" nicename="36">
+<![CDATA[36]]>		</category>
+		<category domain="size" nicename="37">
+<![CDATA[37]]>		</category>
+		<category domain="size" nicename="38">
+<![CDATA[38]]>		</category>
+		<category domain="size" nicename="39">
+<![CDATA[39]]>		</category>
 		<wp:postmeta>
 			<wp:meta_key>seo-title</wp:meta_key>
 			<wp:meta_value>
@@ -55,8 +65,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>buylink</wp:meta_key>
-			<wp:meta_value>
-<![CDATA[http://www.shareasale.com/m-pr.cfm?merchantID=49928&userID=905184&productID=525471991]]>			</wp:meta_value>
+			<wp:meta_value>http://www.shareasale.com/m-pr.cfm?merchantID=49928&amp;userID=905184&amp;productID=525471991</wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>imagesize</wp:meta_key>
@@ -113,8 +122,18 @@
 		<wp:status>draft</wp:status>
 		<wp:post_name>Sweet-Round-Closed-Toe-Stiletto-High-Heels-Rose-Patent-Leather-Pumps</wp:post_name>
 		<wp:post_type>product</wp:post_type>
-		<category domain="brand" nicename="ami-clubwear">
-<![CDATA[AMI Clubwear]]>		</category>
+		<category domain="product_category" nicename="Shoes">
+<![CDATA[Shoes]]>		</category>
+		<category domain="size" nicename="35">
+<![CDATA[35]]>		</category>
+		<category domain="size" nicename="36">
+<![CDATA[36]]>		</category>
+		<category domain="size" nicename="37">
+<![CDATA[37]]>		</category>
+		<category domain="size" nicename="38">
+<![CDATA[38]]>		</category>
+		<category domain="size" nicename="39">
+<![CDATA[39]]>		</category>
 		<wp:postmeta>
 			<wp:meta_key>seo-title</wp:meta_key>
 			<wp:meta_value>
@@ -149,8 +168,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>buylink</wp:meta_key>
-			<wp:meta_value>
-<![CDATA[http://www.shareasale.com/m-pr.cfm?merchantID=49928&userID=905184&productID=525471992]]>			</wp:meta_value>
+			<wp:meta_value>http://www.shareasale.com/m-pr.cfm?merchantID=49928&amp;userID=905184&amp;productID=525471992</wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>imagesize</wp:meta_key>
@@ -207,8 +225,20 @@
 		<wp:status>draft</wp:status>
 		<wp:post_name>Fashion-Round-Closed-Toe-Patchwork-Stiletto-High-Heels-Black-Patent-Leather-Pumps</wp:post_name>
 		<wp:post_type>product</wp:post_type>
-		<category domain="brand" nicename="ami-clubwear">
-<![CDATA[AMI Clubwear]]>		</category>
+		<category domain="product_category" nicename="Shoes">
+<![CDATA[Shoes]]>		</category>
+		<category domain="size" nicename="35">
+<![CDATA[35]]>		</category>
+		<category domain="size" nicename="36">
+<![CDATA[36]]>		</category>
+		<category domain="size" nicename="37">
+<![CDATA[37]]>		</category>
+		<category domain="size" nicename="38">
+<![CDATA[38]]>		</category>
+		<category domain="size" nicename="39">
+<![CDATA[39]]>		</category>
+		<category domain="size" nicename="40">
+<![CDATA[40]]>		</category>
 		<wp:postmeta>
 			<wp:meta_key>seo-title</wp:meta_key>
 			<wp:meta_value>
@@ -243,8 +273,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>buylink</wp:meta_key>
-			<wp:meta_value>
-<![CDATA[http://www.shareasale.com/m-pr.cfm?merchantID=49928&userID=905184&productID=525471993]]>			</wp:meta_value>
+			<wp:meta_value>http://www.shareasale.com/m-pr.cfm?merchantID=49928&amp;userID=905184&amp;productID=525471993</wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>imagesize</wp:meta_key>
@@ -301,8 +330,18 @@
 		<wp:status>draft</wp:status>
 		<wp:post_name>Attractive-Round-Peep-Toe-Stiletto-High-Heels-Black-Suede-Pumps</wp:post_name>
 		<wp:post_type>product</wp:post_type>
-		<category domain="brand" nicename="ami-clubwear">
-<![CDATA[AMI Clubwear]]>		</category>
+		<category domain="product_category" nicename="Shoes">
+<![CDATA[Shoes]]>		</category>
+		<category domain="size" nicename="35">
+<![CDATA[35]]>		</category>
+		<category domain="size" nicename="36">
+<![CDATA[36]]>		</category>
+		<category domain="size" nicename="37">
+<![CDATA[37]]>		</category>
+		<category domain="size" nicename="38">
+<![CDATA[38]]>		</category>
+		<category domain="size" nicename="39">
+<![CDATA[39]]>		</category>
 		<wp:postmeta>
 			<wp:meta_key>seo-title</wp:meta_key>
 			<wp:meta_value>
@@ -337,8 +376,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>buylink</wp:meta_key>
-			<wp:meta_value>
-<![CDATA[http://www.shareasale.com/m-pr.cfm?merchantID=49928&userID=905184&productID=525471994]]>			</wp:meta_value>
+			<wp:meta_value>http://www.shareasale.com/m-pr.cfm?merchantID=49928&amp;userID=905184&amp;productID=525471994</wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>imagesize</wp:meta_key>
@@ -395,8 +433,20 @@
 		<wp:status>draft</wp:status>
 		<wp:post_name>Affordable-Round-Peep-Toe-Stiletto-High-Heels-Pink-Suede-Pumps</wp:post_name>
 		<wp:post_type>product</wp:post_type>
-		<category domain="brand" nicename="ami-clubwear">
-<![CDATA[AMI Clubwear]]>		</category>
+		<category domain="product_category" nicename="Shoes">
+<![CDATA[Shoes]]>		</category>
+		<category domain="size" nicename="35">
+<![CDATA[35]]>		</category>
+		<category domain="size" nicename="36">
+<![CDATA[36]]>		</category>
+		<category domain="size" nicename="37">
+<![CDATA[37]]>		</category>
+		<category domain="size" nicename="38">
+<![CDATA[38]]>		</category>
+		<category domain="size" nicename="39">
+<![CDATA[39]]>		</category>
+		<category domain="size" nicename="40">
+<![CDATA[40]]>		</category>
 		<wp:postmeta>
 			<wp:meta_key>seo-title</wp:meta_key>
 			<wp:meta_value>
@@ -431,8 +481,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>buylink</wp:meta_key>
-			<wp:meta_value>
-<![CDATA[http://www.shareasale.com/m-pr.cfm?merchantID=49928&userID=905184&productID=525471995]]>			</wp:meta_value>
+			<wp:meta_value>http://www.shareasale.com/m-pr.cfm?merchantID=49928&amp;userID=905184&amp;productID=525471995</wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>imagesize</wp:meta_key>
@@ -489,8 +538,20 @@
 		<wp:status>draft</wp:status>
 		<wp:post_name>Shimmering-Pointy-Closed-Toe-Flattery-Rivet-Embellished-Stiletto-High-Heels-Silver-PU-Pumps</wp:post_name>
 		<wp:post_type>product</wp:post_type>
-		<category domain="brand" nicename="ami-clubwear">
-<![CDATA[AMI Clubwear]]>		</category>
+		<category domain="product_category" nicename="Shoes">
+<![CDATA[Shoes]]>		</category>
+		<category domain="size" nicename="35">
+<![CDATA[35]]>		</category>
+		<category domain="size" nicename="36">
+<![CDATA[36]]>		</category>
+		<category domain="size" nicename="37">
+<![CDATA[37]]>		</category>
+		<category domain="size" nicename="38">
+<![CDATA[38]]>		</category>
+		<category domain="size" nicename="39">
+<![CDATA[39]]>		</category>
+		<category domain="size" nicename="40">
+<![CDATA[40]]>		</category>
 		<wp:postmeta>
 			<wp:meta_key>seo-title</wp:meta_key>
 			<wp:meta_value>
@@ -525,8 +586,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>buylink</wp:meta_key>
-			<wp:meta_value>
-<![CDATA[http://www.shareasale.com/m-pr.cfm?merchantID=49928&userID=905184&productID=525471996]]>			</wp:meta_value>
+			<wp:meta_value>http://www.shareasale.com/m-pr.cfm?merchantID=49928&amp;userID=905184&amp;productID=525471996</wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>imagesize</wp:meta_key>
@@ -583,8 +643,26 @@
 		<wp:status>draft</wp:status>
 		<wp:post_name>Amazing-PU-Zipper-Black-Round-Closed-Toe-Chunky-Super-High-Heel-Mary-Jane-Pumps</wp:post_name>
 		<wp:post_type>product</wp:post_type>
-		<category domain="brand" nicename="ami-clubwear">
-<![CDATA[AMI Clubwear]]>		</category>
+		<category domain="product_category" nicename="Shoes">
+<![CDATA[Shoes]]>		</category>
+		<category domain="size" nicename="34">
+<![CDATA[34]]>		</category>
+		<category domain="size" nicename="35">
+<![CDATA[35]]>		</category>
+		<category domain="size" nicename="36">
+<![CDATA[36]]>		</category>
+		<category domain="size" nicename="37">
+<![CDATA[37]]>		</category>
+		<category domain="size" nicename="38">
+<![CDATA[38]]>		</category>
+		<category domain="size" nicename="39">
+<![CDATA[39]]>		</category>
+		<category domain="size" nicename="40">
+<![CDATA[40]]>		</category>
+		<category domain="size" nicename="41">
+<![CDATA[41]]>		</category>
+		<category domain="size" nicename="42">
+<![CDATA[42]]>		</category>
 		<wp:postmeta>
 			<wp:meta_key>seo-title</wp:meta_key>
 			<wp:meta_value>
@@ -619,8 +697,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>buylink</wp:meta_key>
-			<wp:meta_value>
-<![CDATA[http://www.shareasale.com/m-pr.cfm?merchantID=49928&userID=905184&productID=525471997]]>			</wp:meta_value>
+			<wp:meta_value>http://www.shareasale.com/m-pr.cfm?merchantID=49928&amp;userID=905184&amp;productID=525471997</wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>imagesize</wp:meta_key>
@@ -677,8 +754,26 @@
 		<wp:status>draft</wp:status>
 		<wp:post_name>Attractive-PU-Zipper-Blue-Round-Closed-Toe-Chunky-Super-High-Heel-Mary-Jane-Pumps</wp:post_name>
 		<wp:post_type>product</wp:post_type>
-		<category domain="brand" nicename="ami-clubwear">
-<![CDATA[AMI Clubwear]]>		</category>
+		<category domain="product_category" nicename="Shoes">
+<![CDATA[Shoes]]>		</category>
+		<category domain="size" nicename="34">
+<![CDATA[34]]>		</category>
+		<category domain="size" nicename="35">
+<![CDATA[35]]>		</category>
+		<category domain="size" nicename="36">
+<![CDATA[36]]>		</category>
+		<category domain="size" nicename="37">
+<![CDATA[37]]>		</category>
+		<category domain="size" nicename="38">
+<![CDATA[38]]>		</category>
+		<category domain="size" nicename="39">
+<![CDATA[39]]>		</category>
+		<category domain="size" nicename="40">
+<![CDATA[40]]>		</category>
+		<category domain="size" nicename="41">
+<![CDATA[41]]>		</category>
+		<category domain="size" nicename="42">
+<![CDATA[42]]>		</category>
 		<wp:postmeta>
 			<wp:meta_key>seo-title</wp:meta_key>
 			<wp:meta_value>
@@ -713,8 +808,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>buylink</wp:meta_key>
-			<wp:meta_value>
-<![CDATA[http://www.shareasale.com/m-pr.cfm?merchantID=49928&userID=905184&productID=525471998]]>			</wp:meta_value>
+			<wp:meta_value>http://www.shareasale.com/m-pr.cfm?merchantID=49928&amp;userID=905184&amp;productID=525471998</wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>imagesize</wp:meta_key>
@@ -771,8 +865,26 @@
 		<wp:status>draft</wp:status>
 		<wp:post_name>Beautiful-PU-Zipper-Apricot-Round-Closed-Toe-Chunky-Super-High-Heel-Mary-Jane-Pumps</wp:post_name>
 		<wp:post_type>product</wp:post_type>
-		<category domain="brand" nicename="ami-clubwear">
-<![CDATA[AMI Clubwear]]>		</category>
+		<category domain="product_category" nicename="Shoes">
+<![CDATA[Shoes]]>		</category>
+		<category domain="size" nicename="34">
+<![CDATA[34]]>		</category>
+		<category domain="size" nicename="35">
+<![CDATA[35]]>		</category>
+		<category domain="size" nicename="36">
+<![CDATA[36]]>		</category>
+		<category domain="size" nicename="37">
+<![CDATA[37]]>		</category>
+		<category domain="size" nicename="38">
+<![CDATA[38]]>		</category>
+		<category domain="size" nicename="39">
+<![CDATA[39]]>		</category>
+		<category domain="size" nicename="40">
+<![CDATA[40]]>		</category>
+		<category domain="size" nicename="41">
+<![CDATA[41]]>		</category>
+		<category domain="size" nicename="42">
+<![CDATA[42]]>		</category>
 		<wp:postmeta>
 			<wp:meta_key>seo-title</wp:meta_key>
 			<wp:meta_value>
@@ -807,8 +919,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>buylink</wp:meta_key>
-			<wp:meta_value>
-<![CDATA[http://www.shareasale.com/m-pr.cfm?merchantID=49928&userID=905184&productID=525471999]]>			</wp:meta_value>
+			<wp:meta_value>http://www.shareasale.com/m-pr.cfm?merchantID=49928&amp;userID=905184&amp;productID=525471999</wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>imagesize</wp:meta_key>
@@ -865,8 +976,26 @@
 		<wp:status>draft</wp:status>
 		<wp:post_name>Beauty-PU-Zipper-White-Round-Closed-Toe-Chunky-Super-High-Heel-Mary-Jane-Pumps</wp:post_name>
 		<wp:post_type>product</wp:post_type>
-		<category domain="brand" nicename="ami-clubwear">
-<![CDATA[AMI Clubwear]]>		</category>
+		<category domain="product_category" nicename="Shoes">
+<![CDATA[Shoes]]>		</category>
+		<category domain="size" nicename="34">
+<![CDATA[34]]>		</category>
+		<category domain="size" nicename="35">
+<![CDATA[35]]>		</category>
+		<category domain="size" nicename="36">
+<![CDATA[36]]>		</category>
+		<category domain="size" nicename="37">
+<![CDATA[37]]>		</category>
+		<category domain="size" nicename="38">
+<![CDATA[38]]>		</category>
+		<category domain="size" nicename="39">
+<![CDATA[39]]>		</category>
+		<category domain="size" nicename="40">
+<![CDATA[40]]>		</category>
+		<category domain="size" nicename="41">
+<![CDATA[41]]>		</category>
+		<category domain="size" nicename="42">
+<![CDATA[42]]>		</category>
 		<wp:postmeta>
 			<wp:meta_key>seo-title</wp:meta_key>
 			<wp:meta_value>
@@ -901,8 +1030,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>buylink</wp:meta_key>
-			<wp:meta_value>
-<![CDATA[http://www.shareasale.com/m-pr.cfm?merchantID=49928&userID=905184&productID=525472000]]>			</wp:meta_value>
+			<wp:meta_value>http://www.shareasale.com/m-pr.cfm?merchantID=49928&amp;userID=905184&amp;productID=525472000</wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>imagesize</wp:meta_key>
