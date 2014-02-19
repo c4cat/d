@@ -1,4 +1,5 @@
 #ver for txt file
+# shoes-2022 dress-443 notBoth-658
 from xml.dom import minidom 
 import traceback 
 
@@ -17,14 +18,6 @@ def getLink():
 	for line in txtfile:
 		print 'please wait...'
 		arr = line.split('|')
-
-		# print arr[0]
-		# print arr[1]
-		# print arr[4]
-		# print arr[6]
-		# print arr[7]
-		# print arr[8]
-		# print arr[18]
 		getData(arr[0],arr[1],arr[4],arr[6],arr[7],arr[8],arr[18])
 		print 'No.'+ str(arr[0]) +' is finish'
 
@@ -44,6 +37,7 @@ def getData(theid,title,link,img,price,oldprice,stock):
 	print 'csv done!'
 	try:
 		createItem(title,theid,price,oldprice,arrSize,link,stock)
+		print arrSize
 		print 'xml done!'
 	except:
 		print 'no.'+str(theid)+'is worng!'
@@ -124,12 +118,13 @@ def createItem(a_title,a_id,a_price,a_old_price,arr_size,a_buylink,stock):
 	item.appendChild(post_type) 
 	text = doc.createTextNode("product") 
 	post_type.appendChild(text)
-	category = doc.createElement("category")
-	category.setAttribute("domain", "brand") 
-	category.setAttribute("nicename", "ami-clubwear") 
-	item.appendChild(category) 
-	cdata = doc.createCDATASection('AMI Clubwear')
-	category.appendChild(cdata)
+
+	# category = doc.createElement("category")
+	# category.setAttribute("domain", "brand") 
+	# category.setAttribute("nicename", "ami-clubwear") 
+	# item.appendChild(category) 
+	# cdata = doc.createCDATASection('AMI Clubwear')
+	# category.appendChild(cdata)
 
 	# category = doc.createElement("category")
 	# category.setAttribute("domain", "collection") 
@@ -242,7 +237,19 @@ def createItem(a_title,a_id,a_price,a_old_price,arr_size,a_buylink,stock):
 	postmeta.appendChild(meta_value) 
 	cdata = doc.createCDATASection('size')
 	meta_value.appendChild(cdata)
-	#4 buylink
+
+	#4 buylink ver-cdata
+	# postmeta = doc.createElement("wp:postmeta")
+	# item.appendChild(postmeta) 
+	# meta_key = doc.createElement("wp:meta_key")
+	# postmeta.appendChild(meta_key) 
+	# text = doc.createTextNode("buylink")
+	# meta_key.appendChild(text)
+	# meta_value = doc.createElement("wp:meta_value")
+	# postmeta.appendChild(meta_value) 
+	# cdata = doc.createCDATASection(a_buylink)
+	# meta_value.appendChild(cdata)
+#4 buylink ver-ctext
 	postmeta = doc.createElement("wp:postmeta")
 	item.appendChild(postmeta) 
 	meta_key = doc.createElement("wp:meta_key")
@@ -251,8 +258,8 @@ def createItem(a_title,a_id,a_price,a_old_price,arr_size,a_buylink,stock):
 	meta_key.appendChild(text)
 	meta_value = doc.createElement("wp:meta_value")
 	postmeta.appendChild(meta_value) 
-	cdata = doc.createCDATASection(a_buylink)
-	meta_value.appendChild(cdata)
+	text = doc.createTextNode(a_buylink)
+	meta_value.appendChild(text)
 
 	#4 imagesize
 	postmeta = doc.createElement("wp:postmeta")
@@ -347,30 +354,6 @@ def createItem(a_title,a_id,a_price,a_old_price,arr_size,a_buylink,stock):
 	doc.writexml(f, "\t", "\t", "\n", "utf-8") 
 	f.close() 
 	#end create xml
-
-# def hebing(fdir,outfile):
-#     file_list = os.listdir(fdir)
-#     file_to_write = file(outfile,'w')
-#     for f in file_list:
-#         file_to_read = file(fdir + str(f),'r')
-#         # file_to_write.write('\r\n <!------------')
-#         # file_to_write.write(str(f))
-#         # file_to_write.write('------------> \r\n')
-#         # file_to_write.write('\r\n')
-         
-#         while True:
-#             line = file_to_read.readlines();
-#             line= ''.join(line[1:])
-#             #delete first line
-#             if len(line) == 0:
-#                 break
-#             else:
-#                 file_to_write.write(line)
-#         file_to_read.close()     
-    # file_to_write.close()
-
- 
-
 
 getLink()
 

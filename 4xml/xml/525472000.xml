@@ -12,8 +12,6 @@
 		<wp:status>draft</wp:status>
 		<wp:post_name>Beauty-PU-Zipper-White-Round-Closed-Toe-Chunky-Super-High-Heel-Mary-Jane-Pumps</wp:post_name>
 		<wp:post_type>product</wp:post_type>
-		<category domain="brand" nicename="ami-clubwear">
-<![CDATA[AMI Clubwear]]>		</category>
 		<wp:postmeta>
 			<wp:meta_key>seo-title</wp:meta_key>
 			<wp:meta_value>
@@ -48,8 +46,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>buylink</wp:meta_key>
-			<wp:meta_value>
-<![CDATA[http://www.shareasale.com/m-pr.cfm?merchantID=49928&userID=905184&productID=525472000]]>			</wp:meta_value>
+			<wp:meta_value>http://www.shareasale.com/m-pr.cfm?merchantID=49928&amp;userID=905184&amp;productID=525472000</wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>imagesize</wp:meta_key>
