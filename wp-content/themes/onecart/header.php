@@ -8,6 +8,20 @@ load_theme_textdomain('ocart', get_stylesheet_directory().'/lang/');
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0">
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
+<!-- //here is meta  -->
+<?php 
+$the_id = get_the_ID();
+$taxonomy='product_category';
+$terms =  wp_get_post_terms($the_id,$taxonomy);
+if($terms){
+	for($i=0;$i<count($terms);$i++){
+		$v = $terms[$i]->description;
+		$arr = explode('|',$v);
+		echo '<meta name="description" content="'.$arr[0].'"/>';
+		echo '<meta name="keywords" content="'.$arr[1].'"/>';
+	}
+}
+?>
 
 <?php ocart_seo(); ?>
 
