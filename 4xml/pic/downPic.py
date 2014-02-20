@@ -4,7 +4,7 @@ class AppURLopener(urllib.FancyURLopener):
 def getLink():
 
 
-	txtfile = open('data1-500.txt','r')
+	txtfile = open('data500-1500.txt','r')
 
 
 	for line in txtfile:

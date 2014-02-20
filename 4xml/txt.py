@@ -1,9 +1,6 @@
 #ver for txt file
 # shoes-2022 dress-443 notBoth-658
-# 需要解决的,包括
-# 1.不是dress和shoes的时候不生成,
-# 2.子类
-# 3.
+
 from xml.dom import minidom 
 import traceback 
 
@@ -14,7 +11,7 @@ import sys,csv,re
 from bs4 import BeautifulSoup
 
 def getLink():
-	txtfile = open('data1-500.txt','r')
+	txtfile = open('data1-10.txt','r')
 
 	shoes = ['Heels','Sandals','Boots','Booties','Wedges','Flats','Pumps']
 	dress = ['dress','Dress','Dresses','dresses','jumpsuit','jumpsuits','Skirts','rompers','romper']
@@ -24,17 +21,20 @@ def getLink():
 		arr = line.split('|')
 		arr2 =  arr[1].split(' ')
 		if(set(arr2).intersection(set(shoes))):
-			the_type = 'Shoes'
+			the_type = list(set(arr2).intersection(set(shoes)))
 			print arr[0]+' is shoessss!'
+			getData(arr[0],arr[1],arr[4],arr[6],arr[7],arr[8],arr[18],the_type)
+			print 'No.'+ str(arr[0]) +' is finish'
 		elif(set(arr2).intersection(set(dress))):
-			the_type = 'Dresses'
+			the_type = ['Dresses']
 			print arr[0]+' is dresssss!'
+			getData(arr[0],arr[1],arr[4],arr[6],arr[7],arr[8],arr[18],the_type)
+			print 'No.'+ str(arr[0]) +' is finish'
 		else:
 			the_type = ''
 			print arr[0]+' both not'
 
-		getData(arr[0],arr[1],arr[4],arr[6],arr[7],arr[8],arr[18],the_type)
-		print 'No.'+ str(arr[0]) +' is finish'
+		
 
 
 def getData(theid,title,url,img,price,oldprice,stock,the_type):
@@ -59,14 +59,16 @@ def getData(theid,title,url,img,price,oldprice,stock,the_type):
 
 	createCsv(theid,img)
 	print 'csv done!'
-	try:
-		createItem(title,theid,price,oldprice,arrSize,url,stock,the_type)
-		print 'xml done!'
-	except:
-		print 'no.'+str(theid)+' is worng!'
+	# try:
+	createItem(title,theid,price,oldprice,arrSize,url,stock,the_type)
+	print 'xml done!'
+	# except:
+		# print 'no.'+str(theid)+' is worng!'
 
 
 def createCsv(theid,img):
+	img = os.path.basename(img)
+	img = 'http://dress4club.com/wp-content/uploads/2014/00/' + str(img)
 	filename='csv/'+str(theid)+'.csv'
 	csvfile = file(filename,'w')
 	write = csv.writer(csvfile)
@@ -157,12 +159,13 @@ def createItem(a_title,a_id,a_price,a_old_price,arr_size,a_buylink,stock,a_type)
 	# category.appendChild(cdata)
 
 	if (a_type):
-		category = doc.createElement("category")
-		category.setAttribute("domain", "product_category") 
-		category.setAttribute("nicename", a_type) 
-		item.appendChild(category) 
-		cdata = doc.createCDATASection(a_type)
-		category.appendChild(cdata)
+		for i in a_type:
+			category = doc.createElement("category")
+			category.setAttribute("domain", "product_category") 
+			category.setAttribute("nicename", str(i))
+			item.appendChild(category) 
+			cdata = doc.createCDATASection(str(i))
+			category.appendChild(cdata)
 
 	for i in arr_size:
 		category = doc.createElement("category")

@@ -2,7 +2,6 @@
 
 <?php get_template_part('template','header'); ?>
 
-<?php ocart_display_super_nav() ?>
 
 <div id="blog">
 	

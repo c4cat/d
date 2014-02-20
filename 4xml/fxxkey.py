@@ -1,7 +1,7 @@
 import os,datetime,string
 import sys,csv,re
 
-txtfile = open('data1-500.txt','r')
+txtfile = open('data1-10.txt','r')
 shoes = ['Heels','Sandals','Boots','Booties','Wedges','Flats','Pumps']
 dress = ['dress','Dress','Dresses','dresses','jumpsuit','jumpsuits','Skirts','rompers','romper']
 x = 0
@@ -13,6 +13,7 @@ for line in txtfile:
 		arr2 =  arr[1].split(' ')
 		if(set(arr2).intersection(set(shoes))):
 			print arr[0]+' is shoessss!'
+			print list(set(arr2).intersection(set(shoes)))
 			x = x + 1
 		elif(set(arr2).intersection(set(dress))):
 			print arr[0]+' is dresssss!'

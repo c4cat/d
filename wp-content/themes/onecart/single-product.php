@@ -1,4 +1,18 @@
 <?php get_header(); ?>
+<!-- //here is meta  -->
+<script>
+<?php 
+// $the_id = get_the_ID();
+// echo($the_id);
+
+// $the_cat = get_the_category($the_id);
+// echo($the_cat[0]->cat_name);
+
+
+// $the_cat_des = category_description();
+// echo($the_cat_des);
+?>
+</script>
 
 <script type="text/javascript">
 // custom scripting starts here

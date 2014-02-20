@@ -12,8 +12,10 @@
 		<wp:status>draft</wp:status>
 		<wp:post_name>Affordable-Round-Peep-Toe-Stiletto-High-Heels-Pink-Suede-Pumps</wp:post_name>
 		<wp:post_type>product</wp:post_type>
-		<category domain="product_category" nicename="Shoes">
-<![CDATA[Shoes]]>		</category>
+		<category domain="product_category" nicename="Heels">
+<![CDATA[Heels]]>		</category>
+		<category domain="product_category" nicename="Pumps">
+<![CDATA[Pumps]]>		</category>
 		<category domain="size" nicename="35">
 <![CDATA[35]]>		</category>
 		<category domain="size" nicename="36">

@@ -41,7 +41,7 @@
 	</div>
 
 	<div class="product-info">
-	
+		
 		<div class="product-div">
 		
 			<?php ocart_wishlist_button(); ?>
