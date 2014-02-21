@@ -168,19 +168,15 @@
 
 			<!-- email -->
 			<tr><h3>NEWSLETTER SIGNUP</h3></tr>
-			<tr>
-				<td><input type="email" placeholder="Email" name="ne" size="20" required></td>
-			</tr>
-
-			<tr>
-				<td class="newsletter-td-submit">
-					<input class="newsletter-submit" type="submit" value="Subscribe"/>
-				</td>
-			</tr>
+			<tr><td><input type="email" placeholder="Email" name="ne" size="20" required></td><td class="newsletter-td-submit"><input class="newsletter-submit" id="newsletter-submit" type="submit" value="Subscribe"/></td></tr>
+			<tr></tr>
 
 			</table>
 			</form>
-		</div>
+			</div>
+			<div class='the-pint'>
+			 	<a data-pin-do="embedUser" href="http://www.pinterest.com/dress4club/" data-pin-scale-width="60" data-pin-scale-height="290" data-pin-board-width="188">Visit Dress4Club's profile on Pinterest.</a>
+			</div>
 		</div>
 			<?php ocart_show_grid_filters() ?>
 		</div>

@@ -25,32 +25,24 @@
 		<!-- categories, options -->
 		<div class="filter">
 
-<div style="margin:20px 0 20px 0"><iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FDress4Club%2F1409603325952688&amp;width=190&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:190px; height:290px;" allowTransparency="true"></iframe></div>
-
-			<div style="margin-top:20px">
-                           <div class="newsletter newsletter-subscription">
-			<form method="post" action="http://dress4club.com/wp-content/plugins/newsletter/do/subscribe.php" onsubmit="return newsletter_check(this)">
-
-			<table cellspacing="5" cellpadding="0" border="0">
-
-
-			<!-- email -->
-			<tr><h3>NEWSLETTER SIGNUP</h3></tr>
-			<tr>
-				<td><input type="email" placeholder="Email" name="ne" size="20" required></td>
-			</tr>
-
-			<tr>
-				<td class="newsletter-td-submit">
-					<input class="newsletter-submit" type="submit" value="Subscribe"/>
-				</td>
-			</tr>
-
-			</table>
-			</form>
-		</div>
-		</div>
 			<?php ocart_show_grid_filters() ?>
+			<div style="margin:20px 0"><iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FDress4Club%2F1409603325952688&amp;width=190&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:190px; height:290px;" allowTransparency="true"></iframe></div>
+			<div style="margin:20px 0">
+                <div class="newsletter newsletter-subscription">
+					<form method="post" action="http://dress4club.com/wp-content/plugins/newsletter/do/subscribe.php" onsubmit="return newsletter_check(this)">
+						<table cellspacing="5" cellpadding="0" border="0">
+						<!-- email -->
+							<tr><h3>NEWSLETTER SIGNUP123</h3></tr>
+							<tr><td><input type="email" placeholder="Email" name="ne" size="20" required></td><td class="newsletter-td-submit"><input class="newsletter-submit" id="newsletter-submit" type="submit" value="Subscribe"/></td></tr>
+							<tr></tr>
+						</table>
+					</form>
+				</div>
+				<!-- pint -->
+				<div class='the-pint'>
+					 <a data-pin-do="embedUser" href="http://www.pinterest.com/dress4club/" data-pin-scale-width="60" data-pin-scale-height="290" data-pin-board-width="188">Visit Dress4Club's profile on Pinterest.</a>
+				</div>
+			</div>
 		</div>
 	
 		<div class="catalog">

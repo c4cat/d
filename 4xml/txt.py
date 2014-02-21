@@ -11,7 +11,7 @@ import sys,csv,re
 from bs4 import BeautifulSoup
 
 def getLink():
-	txtfile = open('data1-10.txt','r')
+	txtfile = open('data1-500.txt','r')
 
 	shoes = ['Heels','Sandals','Boots','Booties','Wedges','Flats','Pumps']
 	dress = ['dress','Dress','Dresses','dresses','jumpsuit','jumpsuits','Skirts','rompers','romper']
@@ -59,11 +59,11 @@ def getData(theid,title,url,img,price,oldprice,stock,the_type):
 
 	createCsv(theid,img)
 	print 'csv done!'
-	# try:
-	createItem(title,theid,price,oldprice,arrSize,url,stock,the_type)
-	print 'xml done!'
-	# except:
-		# print 'no.'+str(theid)+' is worng!'
+	try:
+		createItem(title,theid,price,oldprice,arrSize,url,stock,the_type)
+		print 'xml done!'
+	except:
+		print 'no.'+str(theid)+' is worng!'
 
 
 def createCsv(theid,img):
