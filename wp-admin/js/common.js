@@ -92,7 +92,7 @@ showNotice = {
 	},
 
 	note : function(text) {
-		alert(text);
+		// alert(text);
 	}
 };
 

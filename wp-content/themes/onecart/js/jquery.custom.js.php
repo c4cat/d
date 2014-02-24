@@ -2064,7 +2064,7 @@ $(function() {
 					// remove loader
 					$('#loading-results').remove();
 					$('.catalog').css({opacity: 1});
-					alert(123);
+					// alert(123);
 				}
 		});
 		

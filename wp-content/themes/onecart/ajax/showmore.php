@@ -205,15 +205,15 @@ $(function(){
 			$(this).children('a').children('.preload').show();
 		}
     });
-	
 	// load more results on scroll v2
 	if ($('.catalog').length > 0) { // Run the ajax request only when .catalog exists!
 	products_count = $('#products_count').html();
 	show_button_limit = '<?php echo ocart_get_option('max_grid_prods'); ?>';
-	$(window).scroll(function () {
+		// $(window).scroll(function () {
+	$('.the-next').bind('click',function(){
 		var distance = '<?php echo ocart_get_option('scroll_distance'); ?>';
-		if ($(window).scrollTop() + $(window).height() > $(document).height() - distance) {
-			if ($('.catalog_list li').size() < products_count && canScroll == true) {
+		// if ($(window).scrollTop() + $(window).height() > $(document).height() - distance) {
+			if ($('.catalog_list>li').size() < products_count && canScroll == true) {
 				// add new results
 				var taxonomies = '';
 				$('.filter ul a.selected').each( function() {
@@ -226,21 +226,51 @@ $(function(){
 				$.ajax({
 					type: 'post',
 					url: '<?php echo get_template_directory_uri(); ?>/ajax/showmore.php',
-					data: {taxonomies: taxonomies, offset: $('.catalog_list li').size()},
+					data: {taxonomies: taxonomies, offset: $('.catalog_list>li').size()},
 					success: function(res) {
 						// add results
-						$(".catalog_list").append(res);
+					$(".catalog_list").append(res);
 						// enable scroll again
 						canScroll = true;
 						// remove loader
 						$('#loading-results').remove();
 						$('.catalog').css({opacity: 1});
-						console.log(mk2);
+					}
+				});
+			}
+		// }
+	});
+	$(window).scroll(function () {
+		var distance = '<?php echo ocart_get_option('scroll_distance'); ?>';
+		if ($(window).scrollTop() + $(window).height() > $(document).height() - distance) {
+			if ($('.catalog_list>li').size() < products_count && canScroll == true && $('.catalog_list>li').size()/9%2==1 ) {
+				// add new results
+				var taxonomies = '';
+				$('.filter ul a.selected').each( function() {
+					taxonomies = taxonomies + $(this).attr('id') + ',';
+				});
+				canScroll = false;
+				$("body").prepend("<div id='loading-results' style='display:none;'></div>");
+				$('#loading-results').center().show();
+				$('.catalog').css({opacity: 0.2});
+				$.ajax({
+					type: 'post',
+					url: '<?php echo get_template_directory_uri(); ?>/ajax/showmore.php',
+					data: {taxonomies: taxonomies, offset: $('.catalog_list>li').size()},
+					success: function(res) {
+						// add results
+					$(".catalog_list").append(res);
+						// enable scroll again
+						canScroll = true;
+						// remove loader
+						$('#loading-results').remove();
+						$('.catalog').css({opacity: 1});
 					}
 				});
 			}
 		}
 	});
+
 	}
 
 	

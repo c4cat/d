@@ -124,7 +124,7 @@ function ocart_seo() {
 		if ($sep && $sep_position == 1) { $content .= $sep; }
 		if (!$sep && $title == get_bloginfo('name')) { $content .= ' | '.$desc; }
 		$content .= '</title>';
-		$content .= '<meta name="description" content="'.$desc.'" />';
+		// $content .= '<meta name="description" content="'.$desc.'" />';
 	}
 	
 	// search
@@ -139,7 +139,7 @@ function ocart_seo() {
 		if ($sep && $sep_position == 1) { $content .= $sep; }
 		if (!$sep && $title == __('Search Results','ocart') ) { $content .= ' | '.get_bloginfo('name'); }
 		$content .= '</title>';
-		$content .= '<meta name="description" content="'.$desc.'" />';
+		// $content .= '<meta name="description" content="'.$desc.'" />';
 	}
 	
 	// categories, taxonomies
@@ -176,7 +176,7 @@ function ocart_seo() {
 		if ($sep && $sep_position == 1) { $content .= $sep; }
 		if (!$sep && $title == get_bloginfo('name')) { $content .= ' | '.$desc; }
 		$content .= '</title>';
-		$content .= '<meta name="description" content="'.$desc.'" />';
+		// $content .= '<meta name="description" content="'.$desc.'" />';
 	}
 	
 	// 404 not found
@@ -240,7 +240,7 @@ function ocart_seo() {
 		if ($sep && $sep_position == 1) { $content .= $sep; }
 		if (!$sep && $title == $post->post_title && $seo_sep != 'none') { $content .= ' | '.get_bloginfo('name'); }
 		$content .= '</title>';
-		$content .= '<meta name="description" content="'.$desc.'" />';
+		// $content .= '<meta name="description" content="'.$desc.'" />';
 	}
 
 	echo $content;
