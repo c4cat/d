@@ -11,7 +11,7 @@ import sys,csv,re
 from bs4 import BeautifulSoup
 
 def getLink():
-	txtfile = open('data1-500.txt','r')
+	txtfile = open('data1-10.txt','r')
 
 	shoes = ['Heels','Sandals','Boots','Booties','Wedges','Flats','Pumps']
 	dress = ['dress','Dress','Dresses','dresses','jumpsuit','jumpsuits','Skirts','rompers','romper']

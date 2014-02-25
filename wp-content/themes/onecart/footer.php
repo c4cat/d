@@ -2,11 +2,16 @@
 
 </div>
 <!-- Please call pinit.js only once per page -->
-<script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
-
+<script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script> 
 <!-- co2 add  -->
 <link rel="stylesheet" href="<?php bloginfo('template_directory')?>/css/less.css">
 <script type='text/javascript' src='<?php bloginfo('template_directory')?>/js/newsletter.js'></script>
+<script type='text/javascript' src='<?php bloginfo('template_directory')?>/js/scrollFix.js'></script>
+
+<script type='text/javascript'>
+	$("#the-fix").scrollFix();
+
+</script>
 
 <div id="email-all">
 	<div id="email-bg"></div>

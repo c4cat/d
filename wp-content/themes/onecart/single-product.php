@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-
 <script type="text/javascript">
 // custom scripting starts here
 $(function() {
