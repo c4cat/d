@@ -1897,8 +1897,9 @@ $(function() {
 	if ($('.catalog').length > 0) { // Run the ajax request only when .catalog exists!
 		canScroll = false;
 		$("body").prepend("<div id='loading-results' style='display:none;'></div>");
-		$('#loading-results').center().show();
-		$('.catalog').css({opacity: 0.2});
+		// $('#loading-results').center().show();
+		$('#the-pro').show();
+		// $('.catalog').css({opacity: 0.2});
 
 		$.ajax({
 			type: 'post',
@@ -1910,7 +1911,8 @@ $(function() {
 				// enable scroll again
 				canScroll = true;
 				// remove loader
-				$('#loading-results').remove();
+				// $('#loading-results').remove();
+				$('#the-pro').hide();
 				$('.catalog').css({opacity: 1});
 				// alert(123);
 			},
@@ -1995,8 +1997,9 @@ $(function() {
 		// load results and change title
 		canScroll = false;
 		$("body").prepend("<div id='loading-results' style='display:none;'></div>");
-		$('#loading-results').center().show();
-		$('.catalog').css({opacity: 0.2});
+		// $('#loading-results').center().show();
+		// $('.catalog').css({opacity: 0.2});
+		$('#the-pro').show();
 		$('.catalog_title').load('<?php echo get_template_directory_uri(); ?>/ajax/catalog_title.php?pricemin=' + pricemin + '&pricemax=' + pricemax + '&taxonomies=' + taxonomies);
 		
 		// show more
@@ -2010,7 +2013,8 @@ $(function() {
 					// enable scroll again
 					canScroll = true;
 					// remove loader
-					$('#loading-results').remove();
+					// $('#loading-results').remove();
+					$('#the-pro').hide();
 					$('.catalog').css({opacity: 1});
 					// alert(123);
 				}
@@ -2047,8 +2051,9 @@ $(function() {
 		// load results and change title
 		canScroll = false;
 		$("body").prepend("<div id='loading-results' style='display:none;'></div>");
-		$('#loading-results').center().show();
-		$('.catalog').css({opacity: 0.2});
+		// $('#loading-results').center().show();
+		// $('.catalog').css({opacity: 0.2});
+		$('#the-pro').show();
 		$('.catalog_title').load('<?php echo get_template_directory_uri(); ?>/ajax/catalog_title.php?pricemin=' + pricemin + '&pricemax=' + pricemax + '&taxonomies=' + taxonomies);
 		
 		// show more
@@ -2062,7 +2067,8 @@ $(function() {
 					// enable scroll again
 					canScroll = true;
 					// remove loader
-					$('#loading-results').remove();
+					// $('#loading-results').remove();
+					$('#the-pro').hide();
 					$('.catalog').css({opacity: 1});
 					// alert(123);
 				}
@@ -2090,8 +2096,9 @@ $(function() {
 		// load results and change title
 		canScroll = false;
 		$("body").prepend("<div id='loading-results' style='display:none;'></div>");
-		$('#loading-results').center().show();
-		$('.catalog').css({opacity: 0.2});
+		// $('#loading-results').center().show();
+		// $('.catalog').css({opacity: 0.2});
+		$('#the-pro').show();
 		$('.catalog_title').load('<?php echo get_template_directory_uri(); ?>/ajax/catalog_title.php?pricemin=' + pricemin + '&pricemax=' + pricemax + '&taxonomies=' + taxonomies);
 		
 		// show more
@@ -2105,7 +2112,8 @@ $(function() {
 					// enable scroll again
 					canScroll = true;
 					// remove loader
-					$('#loading-results').remove();
+					// $('#loading-results').remove();
+					$('#the-pro').hide();
 					$('.catalog').css({opacity: 1});
 				}
 		});
@@ -2352,8 +2360,9 @@ $(function() {
 					// load results and change title
 					canScroll = false;
 					$("body").prepend("<div id='loading-results' style='display:none;'></div>");
-					$('#loading-results').center().show();
-					$('.catalog').css({opacity: 0.2});
+					// $('#loading-results').center().show();
+					// $('.catalog').css({opacity: 0.2});
+					$('#the-pro').show();
 					$('.catalog_title').load('<?php echo get_template_directory_uri(); ?>/ajax/catalog_title.php?pricemin=' + pricemin + '&pricemax=' + pricemax + '&taxonomies=' + taxonomies);
 					
 					// show more
@@ -2367,7 +2376,8 @@ $(function() {
 								// enable scroll again
 								canScroll = true;
 								// remove loader
-								$('#loading-results').remove();
+								// $('#loading-results').remove();
+								$('#the-pro').hide();
 								$('.catalog').css({opacity: 1});
 								// alert(123);
 

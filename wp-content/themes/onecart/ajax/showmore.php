@@ -210,6 +210,7 @@ $(function(){
 	products_count = $('#products_count').html();
 	show_button_limit = '<?php echo ocart_get_option('max_grid_prods'); ?>';
 		// $(window).scroll(function () {
+
 	$('.the-next').bind('click',function(){
 		var distance = '<?php echo ocart_get_option('scroll_distance'); ?>';
 		// if ($(window).scrollTop() + $(window).height() > $(document).height() - distance) {
@@ -221,8 +222,7 @@ $(function(){
 				});
 				canScroll = false;
 				$("body").prepend("<div id='loading-results' style='display:none;'></div>");
-				$('#loading-results').center().show();
-				$('.catalog').css({opacity: 0.2});
+				$('#the-pro').show();
 				$.ajax({
 					type: 'post',
 					url: '<?php echo get_template_directory_uri(); ?>/ajax/showmore.php',
@@ -233,26 +233,28 @@ $(function(){
 						// enable scroll again
 						canScroll = true;
 						// remove loader
-						$('#loading-results').remove();
-						$('.catalog').css({opacity: 1});
+						$('#the-pro').hide();
 					}
 				});
 			}
 		// }
 	});
 	$(window).scroll(function () {
+		$('.the-next').hide();
 		var distance = '<?php echo ocart_get_option('scroll_distance'); ?>';
 		if ($(window).scrollTop() + $(window).height() > $(document).height() - distance) {
-			if ($('.catalog_list>li').size() < products_count && canScroll == true && $('.catalog_list>li').size()/9%2==1 ) {
+			// console.log($('.catalog_list>li').size()/9%4);
+			if ($('.catalog_list>li').size() < products_count && canScroll == true && $('.catalog_list>li').size()/9%4>=1 ) {
 				// add new results
 				var taxonomies = '';
 				$('.filter ul a.selected').each( function() {
 					taxonomies = taxonomies + $(this).attr('id') + ',';
 				});
 				canScroll = false;
-				$("body").prepend("<div id='loading-results' style='display:none;'></div>");
-				$('#loading-results').center().show();
-				$('.catalog').css({opacity: 0.2});
+				//$("body").prepend("<div id='loading-results' style='display:none;'></div>");
+				// $('#loading-results').center().show();
+				$('#the-pro').show();
+				// $('.catalog').css({opacity: 0.2});
 				$.ajax({
 					type: 'post',
 					url: '<?php echo get_template_directory_uri(); ?>/ajax/showmore.php',
@@ -263,10 +265,11 @@ $(function(){
 						// enable scroll again
 						canScroll = true;
 						// remove loader
-						$('#loading-results').remove();
-						$('.catalog').css({opacity: 1});
+						$('#the-pro').hide();
 					}
 				});
+			}else{
+				$('.the-next').show();
 			}
 		}
 	});
