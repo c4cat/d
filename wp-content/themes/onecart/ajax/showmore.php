@@ -210,8 +210,10 @@ $(function(){
 	if ($('.catalog').length > 0) { // Run the ajax request only when .catalog exists!
 	products_count = $('#products_count').html();
 	show_button_limit = '<?php echo ocart_get_option('max_grid_prods'); ?>';
+	var i = 0;
 	$(window).scroll(function () {
 		var distance = '<?php echo ocart_get_option('scroll_distance'); ?>';
+	if(i%2==0){
 		if ($(window).scrollTop() + $(window).height() > $(document).height() - distance) {
 			if ($('.catalog_list li').size() < products_count && canScroll == true) {
 				// add new results
@@ -235,11 +237,14 @@ $(function(){
 						// remove loader
 						$('#loading-results').remove();
 						$('.catalog').css({opacity: 1});
-						console.log(mk2);
+						i = i + 1;
+						console.log(i);
 					}
 				});
 			}
 		}
+	}//end if i	
+
 	});
 	}
 
