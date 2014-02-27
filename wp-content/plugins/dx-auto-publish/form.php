@@ -33,8 +33,8 @@ if($_POST['delete_draft']){
 			</p>
 			<p><?php submit_button('更新计划','primary','update_draft',''); submit_button('取消计划','secondary','delete_draft','');?></p>
 		</form>
-		<?php if(wp_next_scheduled('DXAP_cron_draft_update_hook')):?><p style="color:red">下一个计划任务时间：<?php echo date('Y-m-d H:i:s',wp_next_scheduled('DXAP_cron_draft_update_hook'));?></p><?php else:?>
-		<p style="color:gray;">计划任务已停止！</p>
+		<?php if(wp_next_scheduled('DXAP_cron_draft_update_hook')):?><p style="color:red">Working...</p><?php else:?>
+		<p style="color:gray;">Stop！</p>
 		<?php endif;?>
 		</div>
 		

@@ -55,8 +55,7 @@
 			<ul class="catalog_list">
 			<!-- data -->
 			</ul>
-			<div class="progress-bar blue stripes" id='the-pro'><span style="width:100%;"></span></div>
-			<a href="javascript:void(0)" class='the-next'>Load More...</a>
+			<div class="progress-bar blue stripes" id='the-pro'><span style="width:100%;"><a href="javascript:void(0)" class='the-next'>Click To Load More...</a></span></div>
 			<div class="clear"></div>
 		
 		</div><div class="clear"></div>

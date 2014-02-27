@@ -199,12 +199,9 @@
 }
 .the-next {
   display: none;
-  left: 29.6%;
-  top: 10px;
+  left: 26%;
+  top: 6px;
   position: relative;
-  padding: 5px 100px;
-  background: #ea6ea0!important;
-  border-radius: 4px;
   color: #fff;
   font-family: Ubuntu;
   font-weight: normal;
@@ -326,6 +323,6 @@
   }
 }
 #the-pro {
-  display: none;
+  display: block!important;
   margin-top: 10px;
 }

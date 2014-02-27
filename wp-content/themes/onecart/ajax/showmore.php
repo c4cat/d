@@ -210,11 +210,10 @@ $(function(){
 	if ($('.catalog').length > 0) { // Run the ajax request only when .catalog exists!
 	products_count = $('#products_count').html();
 	show_button_limit = '<?php echo ocart_get_option('max_grid_prods'); ?>';
-		// $(window).scroll(function () {
 
 	$('.the-next').bind('click',function(){
+		$('.the-next').hide();
 		var distance = '<?php echo ocart_get_option('scroll_distance'); ?>';
-		// if ($(window).scrollTop() + $(window).height() > $(document).height() - distance) {
 			if ($('.catalog_list>li').size() < products_count && canScroll == true) {
 				// add new results
 				var taxonomies = '';
@@ -223,7 +222,6 @@ $(function(){
 				});
 				canScroll = false;
 				$("body").prepend("<div id='loading-results' style='display:none;'></div>");
-				$('#the-pro').show();
 				$.ajax({
 					type: 'post',
 					url: '<?php echo get_template_directory_uri(); ?>/ajax/showmore.php',
@@ -234,17 +232,15 @@ $(function(){
 						// enable scroll again
 						canScroll = true;
 						// remove loader
-						$('#the-pro').hide();
+						$('.the-next').show();
 					}
 				});
 			}
 		// }
 	});
 	$(window).scroll(function () {
-		$('.the-next').hide();
 		var distance = '<?php echo ocart_get_option('scroll_distance'); ?>';
 		if ($(window).scrollTop() + $(window).height() > $(document).height() - distance) {
-			// console.log($('.catalog_list>li').size()/9%4);
 			if ($('.catalog_list>li').size() < products_count && canScroll == true && $('.catalog_list>li').size()/9%4>=1 ) {
 				// add new results
 				var taxonomies = '';
@@ -252,21 +248,16 @@ $(function(){
 					taxonomies = taxonomies + $(this).attr('id') + ',';
 				});
 				canScroll = false;
-				//$("body").prepend("<div id='loading-results' style='display:none;'></div>");
-				// $('#loading-results').center().show();
-				$('#the-pro').show();
-				// $('.catalog').css({opacity: 0.2});
 				$.ajax({
 					type: 'post',
 					url: '<?php echo get_template_directory_uri(); ?>/ajax/showmore.php',
 					data: {taxonomies: taxonomies, offset: $('.catalog_list>li').size()},
 					success: function(res) {
 						// add results
-					$(".catalog_list").append(res);
+						$(".catalog_list").append(res);
 						// enable scroll again
 						canScroll = true;
 						// remove loader
-						$('#the-pro').hide();
 					}
 				});
 			}else{

@@ -53,14 +53,11 @@ class DX_Auto_Publish{
 	function form_bottom(){
 ?>
 	
-	<p>插件介绍：<a href="http://www.daxiawp.com/dx-auto-publish.html" target="_blank">http://www.daxiawp.com/dx-auto-publish.html</a></p>
-	<p>wordpress主题请访问<a href="http://www.daxiawp.com" target="_blank">daxiawp</a>，大量大侠wp制作的主题供选择。wordpress定制、仿站、插件开发请联系：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1683134075&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1683134075:44" alt="点击这里给我发消息" title="点击这里给我发消息">1683134075</a></p>
-	
 <?php
 	}		
 
 }
 
-date_default_timezone_set( get_option('timezone_string') );
+// date_default_timezone_set( get_option('timezone_string') );
 new DX_Auto_Publish();
-if( !function_exists('_daxiawp_theme_menu_page') ) include_once( 'theme.php' );
+// if( !function_exists('_daxiawp_theme_menu_page') ) include_once( 'theme.php' );
