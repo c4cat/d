@@ -11,7 +11,7 @@ import sys,csv,re
 from bs4 import BeautifulSoup
 
 def getLink():
-	txtfile = open('data1-10.txt','r')
+	txtfile = open('data.txt','r')
 
 	shoes = ['Heels','Sandals','Boots','Booties','Wedges','Flats','Pumps','Sneaker','Slipper']
 	dress = ['dress','Dress','Dresses','dresses','jumpsuit','jumpsuits','Skirts','rompers','romper']
@@ -59,47 +59,51 @@ def getLink():
 
 
 def getData(theid,title,url,img,price,oldprice,stock,the_type):
-	opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookielib.CookieJar()))
-	opener.addheaders = [('User-agent', 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322)')]
-	f = opener.open(url)
-	c = f.read()
-	f.close()
-	# print c
-	reg = re.compile('(?<=replace\(\').*?(?=\'\))',re.S)
-	c = re.findall(reg,c)[0]
-
-	soup = BeautifulSoup(urllib2.urlopen(c))
-	details = soup.find_all("div", "std")[0].string
-
-	#------------------------------
-	# getSize = str(soup.find_all("select","size_select"))
-	# regGetSize = re.compile('(?<=\"\>).*?(?=\<)',re.S)
-	# arrSize = re.findall(regGetSize,getSize)
-	# del arrSize[0:2]
-	#------------------------------
-	sell = soup.find_all("span", "value-title")[0].string
 	try:
-		sell = str(soup.find_all("span", "value-title")[0].string.replace(" ", "").lower())
-	except:
-		sell = str(soup.find_all("span", "value-title")[1].string.replace(" ", "").lower())
+		opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookielib.CookieJar()))
+		opener.addheaders = [('User-agent', 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322)')]
+		f = opener.open(url)
+		c = f.read()
+		f.close()
+		# print c
+		reg = re.compile('(?<=replace\(\').*?(?=\'\))',re.S)
+		c = re.findall(reg,c)[0]
 
-		
-	if(len(sell)<10):
-		option = str(soup.fieldset.find_all("script"))
-		reg = re.compile('(?<=label\":\").*?(?=\")',re.S)
-		arrSize = re.findall(reg,option)
-		#arr_size
-		del arrSize[0]
-	else:
-		arrSize= []
+		soup = BeautifulSoup(urllib2.urlopen(c))
+		details = soup.find_all("div", "std")[0].string
 
-	createCsv(theid,img)
-	print 'csv done!'
-	try:
-		createItem(title,theid,price,oldprice,arrSize,url,stock,the_type,details)
-		print 'xml done!'
+
+		#------------------------------
+		# getSize = str(soup.find_all("select","size_select"))
+		# regGetSize = re.compile('(?<=\"\>).*?(?=\<)',re.S)
+		# arrSize = re.findall(regGetSize,getSize)
+		# del arrSize[0:2]
+		#------------------------------
+		sell = soup.find_all("span", "value-title")[0].string
+		try:
+			sell = str(soup.find_all("span", "value-title")[0].string.replace(" ", "").lower())
+		except:
+			sell = str(soup.find_all("span", "value-title")[1].string.replace(" ", "").lower())
+	
+			
+		if(len(sell)<10):
+			option = str(soup.fieldset.find_all("script"))
+			reg = re.compile('(?<=label\":\").*?(?=\")',re.S)
+			arrSize = re.findall(reg,option)
+			#arr_size
+			del arrSize[0]
+		else:
+			arrSize= []
+	
+		createCsv(theid,img)
+		print 'csv done!'
+		try:
+			createItem(title,theid,price,oldprice,arrSize,url,stock,the_type,details)
+			print 'xml done!'
+		except:
+			print 'no.'+str(theid)+' is worng!'
 	except:
-		print 'no.'+str(theid)+' is worng!'
+		print 'no.'+str(theid)+' is 404!' 		
 
 # here is the function u should 
 # def createCsv(theid,img):

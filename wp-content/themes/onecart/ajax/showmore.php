@@ -142,7 +142,8 @@ foreach ($posts as $post): setup_postdata($post);
 						<p><?php the_title(); ?></p>
 						<ul>
 							<li><iframe src="//www.facebook.com/plugins/like.php?href=<?php echo($link); ?>&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;" allowTransparency="true"></iframe></li>
-							<li><a target='_blank' href="//www.pinterest.com/pin/create/button/?url=<?php echo($link); ?>&media=<?php echo(wp_get_attachment_url(get_post_thumbnail_id($post_id -> $product_id))); ?>&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a></li>
+							<li><a target='_blank' href="//www.pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink($post->ID)); ?>&media=<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); echo urlencode($image[0]); ?>&description=<?php echo urlencode($post->post_title); ?>" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a></li>
+
 							<li><a href="javascript:lightbox(null, '<?php echo get_template_directory_uri(); ?>/ajax/product_lightbox.php', '', '<?php the_ID(); ?>', '<?php echo get_permalink($post->ID); ?>');" id='hover-a'>Details</a></li>
 						</ul>
 						</div>
