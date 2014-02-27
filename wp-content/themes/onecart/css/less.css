@@ -198,7 +198,8 @@
   top: -1px;
 }
 .the-next {
-  left: 25%;
+  display: none;
+  left: 29.6%;
   top: 10px;
   position: relative;
   padding: 5px 100px;
@@ -210,4 +211,121 @@
 }
 .the-next:hover {
   color: #ccc;
+}
+.progress-bar {
+  margin: 0 auto;
+  background-color: #fff;
+  height: 28px;
+  padding: 5px;
+  width: 289px;
+  border-radius: 5px;
+}
+.progress-bar span {
+  display: inline-block;
+  height: 100%;
+  background-color: #777;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  transition: width 0.4s ease-in-out;
+}
+.blue span {
+  background-color: #ea6ea0;
+}
+.orange span {
+  background-color: #fecf23;
+  background-image: -webkit-linear-gradient(top, #fecf23, #fd9215);
+}
+.green span {
+  background-color: #a5df41;
+  background-image: -webkit-linear-gradient(top, #a5df41, #4ca916);
+}
+.stripes span {
+  -webkit-background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  -webkit-animation: animate-stripes 3s linear infinite;
+}
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 60px 0;
+  }
+}
+.shine span {
+  position: relative;
+}
+.shine span:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-animation: animate-shine 2s ease-out infinite;
+  -webkit-animation: animate-shine 2s ease-out infinite;
+}
+@-moz-keyframes animate-shine {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    width: 95%;
+  }
+}
+@-webkit-keyframes animate-shine {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    width: 95%;
+  }
+}
+.glow span {
+  -moz-box-shadow: 0 5px 5px rgba(255, 255, 255, 0.7) inset, 0 -5px 5px rgba(255, 255, 255, 0.7) inset;
+  -webkit-box-shadow: 0 5px 5px rgba(255, 255, 255, 0.7) inset, 0 -5px 5px rgba(255, 255, 255, 0.7) inset;
+  box-shadow: 0 5px 5px rgba(255, 255, 255, 0.7) inset, 0 -5px 5px rgba(255, 255, 255, 0.7) inset;
+  -webkit-animation: animate-glow 1s ease-out infinite;
+  -moz-animation: animate-glow 1s ease-out infinite;
+}
+@-moz-keyframes animate-glow {
+  0% {
+    -moz-box-shadow: 0 5px 5px rgba(255, 255, 255, 0.7) inset, 0 -5px 5px rgba(255, 255, 255, 0.7) inset;
+  }
+  50% {
+    -moz-box-shadow: 0 5px 5px rgba(255, 255, 255, 0.3) inset, 0 -5px 5px rgba(255, 255, 255, 0.3) inset;
+  }
+  100% {
+    -moz-box-shadow: 0 5px 5px rgba(255, 255, 255, 0.7) inset, 0 -5px 5px rgba(255, 255, 255, 0.7) inset;
+  }
+}
+@-webkit-keyframes animate-glow {
+  0% {
+    -webkit-box-shadow: 0 5px 5px rgba(255, 255, 255, 0.7) inset, 0 -5px 5px rgba(255, 255, 255, 0.7) inset;
+  }
+  50% {
+    -webkit-box-shadow: 0 5px 5px rgba(255, 255, 255, 0.3) inset, 0 -5px 5px rgba(255, 255, 255, 0.3) inset;
+  }
+  100% {
+    -webkit-box-shadow: 0 5px 5px rgba(255, 255, 255, 0.7) inset, 0 -5px 5px rgba(255, 255, 255, 0.7) inset;
+  }
+}
+#the-pro {
+  display: none;
+  margin-top: 10px;
 }

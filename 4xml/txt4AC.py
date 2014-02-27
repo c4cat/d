@@ -13,28 +13,49 @@ from bs4 import BeautifulSoup
 def getLink():
 	txtfile = open('data1-10.txt','r')
 
-	shoes = ['Heels','Sandals','Boots','Booties','Wedges','Flats','Pumps']
+	shoes = ['Heels','Sandals','Boots','Booties','Wedges','Flats','Pumps','Sneaker','Slipper']
 	dress = ['dress','Dress','Dresses','dresses','jumpsuit','jumpsuits','Skirts','rompers','romper']
+	intimates = ['Lingerie','Corsets','Hosiery','Undergarment','Leggings','Pantyhose','Tights','Stockings','Tutus','Panties','Thong','Boyshorts','Bra','Garter','Belt','Chemise','Teddy','Babydolls','Camis','Variety Teddies'] 
+	accessories = ['Set','Handbagg','Cincher','Belt','Scarf','Body','Mask','Props','Pendant','Hairpin','Wig','Brooch','Bracelet','Backpack','Earrings','Eyelash','Fragrance','Clutches','Wallet','Hair','HEAD BANDS','Handbag','Hat','Necklace','Ring','Scarves','Accessory','Sunglass','Sunglasses','Watch','Watches','Gloves','Cosmetic']
+	clothing = ['Costume','Top','SheerLace','Blouse','Overcoat','Vest','Zentai','Denim','Cardigan','Corset','Bustier','Cape','Coats','Jacket','Blazer','Jumpsuit','Base Layer','Jeans','Sleepwear','Hoodies','Hoody','Knit','Knitwear','Tank','Tee','Shirt','Skirt','Pant','Pants','Coat','Shorts','Bottom','Dancewear','Bodysuit','Cropped','Costume','Romper','Clubwear','Rave','Sweater','Outerwear','Outfit']
+	swimsuits =['One-Piece','Two-Piece','Pucker','Back','Scrunch','Butt','Lace','swimwear','Animal','Print','Bling','Sequin','Fringe','Crochet','Flags','Patriotic','Push-Up','Padded','Bandeau','LBB','LBD','Bikinis','High-Waist','Bandeau']
 
 	for line in txtfile:
 		print 'please wait...'
 		arr = line.split('|')
+		# print arr
 		arr2 =  arr[1].split(' ')
 		if(set(arr2).intersection(set(shoes))):
 			the_type = list(set(arr2).intersection(set(shoes)))
 			print arr[0]+' is shoessss!'
-			getData(arr[0],arr[1],arr[4],arr[6],arr[7],arr[8],arr[18],the_type)
+			getData(arr[0],arr[1],arr[4],arr[6],arr[7],' ',arr[18],the_type)
 			print 'No.'+ str(arr[0]) +' is finish'
 		elif(set(arr2).intersection(set(dress))):
-			the_type = ['Dresses']
+			the_type = list(set(arr2).intersection(set(dress)))
 			print arr[0]+' is dresssss!'
-			getData(arr[0],arr[1],arr[4],arr[6],arr[7],arr[8],arr[18],the_type)
+			getData(arr[0],arr[1],arr[4],arr[6],arr[7],' ',arr[18],the_type)
 			print 'No.'+ str(arr[0]) +' is finish'
+		elif(set(arr2).intersection(set(intimates))):
+			the_type = list(set(arr2).intersection(set(intimates)))
+			print arr[0]+' is intimates!'
+			getData(arr[0],arr[1],arr[4],arr[6],arr[7],' ',arr[18],the_type)
+			print 'No.'+ str(arr[0]) +' is finish'
+		elif(set(arr2).intersection(set(accessories))):
+			the_type = list(set(arr2).intersection(set(accessories)))
+			getData(arr[0],arr[1],arr[4],arr[6],arr[7],' ',arr[18],the_type)
+			print arr[0]+' is accessories!'	
+		elif(set(arr2).intersection(set(clothing))):
+			the_type = list(set(arr2).intersection(set(clothing)))
+			getData(arr[0],arr[1],arr[4],arr[6],arr[7],' ',arr[18],the_type)
+			print arr[0]+' is clothing!'
+		elif(set(arr2).intersection(set(swimsuits))):
+			the_type = list(set(arr2).intersection(set(swimsuits)))
+			getData(arr[0],arr[1],arr[4],arr[6],arr[7],' ',arr[18],the_type)
+			print arr[0]+' is swimsuits!'			
 		else:
 			the_type = ''
 			print arr[0]+' both not'
 
-		
 
 
 def getData(theid,title,url,img,price,oldprice,stock,the_type):
@@ -48,37 +69,60 @@ def getData(theid,title,url,img,price,oldprice,stock,the_type):
 	c = re.findall(reg,c)[0]
 
 	soup = BeautifulSoup(urllib2.urlopen(c))
+	details = soup.find_all("div", "std")[0].string
 
-	getSize = str(soup.find_all("select","size_select"))
-	regGetSize = re.compile('(?<=\"\>).*?(?=\<)',re.S)
-	arrSize = re.findall(regGetSize,getSize)
-	del arrSize[0:2]
-	# print arrSize
+	#------------------------------
+	# getSize = str(soup.find_all("select","size_select"))
+	# regGetSize = re.compile('(?<=\"\>).*?(?=\<)',re.S)
+	# arrSize = re.findall(regGetSize,getSize)
+	# del arrSize[0:2]
+	#------------------------------
+	sell = soup.find_all("span", "value-title")[0].string
+	try:
+		sell = str(soup.find_all("span", "value-title")[0].string.replace(" ", "").lower())
+	except:
+		sell = str(soup.find_all("span", "value-title")[1].string.replace(" ", "").lower())
 
-
+		
+	if(len(sell)<10):
+		option = str(soup.fieldset.find_all("script"))
+		reg = re.compile('(?<=label\":\").*?(?=\")',re.S)
+		arrSize = re.findall(reg,option)
+		#arr_size
+		del arrSize[0]
+	else:
+		arrSize= []
 
 	createCsv(theid,img)
 	print 'csv done!'
 	try:
-		createItem(title,theid,price,oldprice,arrSize,url,stock,the_type)
+		createItem(title,theid,price,oldprice,arrSize,url,stock,the_type,details)
 		print 'xml done!'
 	except:
 		print 'no.'+str(theid)+' is worng!'
 
+# here is the function u should 
+# def createCsv(theid,img):
+# 	img = os.path.basename(img)
+# 	img = 'http://dress4club.com/wp-content/uploads/2014/00/' + str(img)
+# 	filename='csv/'+str(theid)+'.csv'
+# 	csvfile = file(filename,'w')
+# 	write = csv.writer(csvfile)
+# 	write.writerow(['post_id','post_type','post_thumbnail'])
+# 	data=[(theid,'product',img)]
+# 	write.writerows(data)
+# 	csvfile.close()
 
-def createCsv(theid,img):
-	img = os.path.basename(img)
-	img = 'http://dress4club.com/wp-content/uploads/2014/00/' + str(img)
+def createCsv(theid,imgLink):
 	filename='csv/'+str(theid)+'.csv'
 	csvfile = file(filename,'w')
 	write = csv.writer(csvfile)
 	write.writerow(['post_id','post_type','post_thumbnail'])
-	data=[(theid,'product',img)]
+	data=[(theid,'product',imgLink)]
 	write.writerows(data)
 	csvfile.close()
 
-
-def createItem(a_title,a_id,a_price,a_old_price,arr_size,a_buylink,stock,a_type):
+def createItem(a_title,a_id,a_price,a_old_price,arr_size,a_buylink,stock,a_type,a_details):
 	filename = 'xml/' + str(a_id) + '.xml'
 	f = open(filename, "w") 
 	
@@ -113,13 +157,13 @@ def createItem(a_title,a_id,a_price,a_old_price,arr_size,a_buylink,stock,a_type)
 	guid.appendChild(text)
 	description = doc.createElement("description")
 	item.appendChild(description) 
-	text = doc.createTextNode("") 
+	text = doc.createTextNode('') 
 	description.appendChild(text)
 	content = doc.createElement("content:encoded")
 	item.appendChild(content) 
 
-	# cdata = doc.createCDATASection(a_des)
-	text = doc.createTextNode(" ")
+	# cdata = doc.createCDATASection(a_details)
+	text = doc.createTextNode(a_details)
 	# content.appendChild(cdata)
 	content.appendChild(text)
 
@@ -257,7 +301,7 @@ def createItem(a_title,a_id,a_price,a_old_price,arr_size,a_buylink,stock,a_type)
 	if(a_old_price == a_price):
 		text = doc.createTextNode('')
 	else:
-		text = doc.createTextNode('a_old_price')	
+		text = doc.createTextNode(a_old_price)	
 	meta_value.appendChild(text)
 
 	#4 tagline_term

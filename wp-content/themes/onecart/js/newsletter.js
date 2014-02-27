@@ -20,7 +20,7 @@
      }
    }  
   $("#closebtn").click(function(){document.cookie="isshow=";$("#email-all").hide();});
-  $("#closebtn_").click(function(){document.cookie="isshow=true";$("#email-all").hide();location.href=location.href;});
+  $("#closebtn_").click(function(){document.cookie="isshow=true";$("#email-all").hide();});
   setTimeout("showdiv()",2000);
 }
 );

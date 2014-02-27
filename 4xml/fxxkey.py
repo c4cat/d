@@ -2,7 +2,7 @@ import os,datetime,string
 import sys,csv,re
 
 txtfile = open('data1-10.txt','r')
-shoes = ['Heels','Sandals','Boots','Booties','Wedges','Flats','Pumps']
+shoes = ['Heels','Sandals','Boots','Booties','Wedges','Flats','Pumps','Sneaker','Slipper']
 dress = ['dress','Dress','Dresses','dresses','jumpsuit','jumpsuits','Skirts','rompers','romper']
 x = 0
 y = 0
