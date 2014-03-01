@@ -2021,7 +2021,68 @@ $(function() {
 		});
 		
 	});
-	
+//------------------------------------------------------------------------------------------
+	// load items based on nav filters
+	// 2014年3月1日16:52:06
+	// cornelia
+	$('#supermenu a').live('click',function(e){
+		$('#supermenu a').removeClass('selected');
+		e.preventDefault();
+
+		// mark 'selected' or 'unselected'
+		// if ($(this).hasClass('selected')) {
+			
+		// } else {
+			$(this).addClass('selected');
+		// }
+		
+		// mark unselected from main menu
+		$('#supermenu li#' + $(this).attr('id')).removeClass('current-menu-item');
+		
+		// mark parent unselected if this is child
+		if ($(this).parent().parent().hasClass('children')) {
+			$(this).parent().parent().parent().children('a').removeClass('selected');
+		}
+		
+		// get active taxonomies
+		var taxonomies = '';
+		$('#supermenu a.selected').each( function() {
+			name = $(this).html().toLowerCase();
+			name = 'product_category-'+ name
+			taxonomies = taxonomies + name + ',';
+			console.log(taxonomies);
+		});
+		
+			pricemin = $('.text_min ins').html();
+			pricemax = $('.text_max ins').html();
+		
+		// load results and change title
+		canScroll = false;
+		$("body").prepend("<div id='loading-results' style='display:none;'></div>");
+		$('#the-pro').show();
+		$('.catalog_title').load('<?php echo get_template_directory_uri(); ?>/ajax/catalog_title.php?pricemin=' + pricemin + '&pricemax=' + pricemax + '&taxonomies=' + taxonomies);
+		
+		// show more
+		$.ajax({
+				type: 'post',
+				url: '<?php echo get_template_directory_uri(); ?>/ajax/showmore.php',
+				data: {pricemin: pricemin, pricemax: pricemax, taxonomies: taxonomies, offset: 0},
+				success: function(res) {
+					// add results
+					$(".catalog_list").html(res);
+					// enable scroll again
+					canScroll = true;
+					// remove loader
+					// $('#loading-results').remove();
+					$('#the-pro').hide();
+					$('.catalog').css({opacity: 1});
+					// alert(123);
+				}
+		});
+		
+	});
+	// add end
+	//--------------------------------------------------------
 	// clear filters
 	$('.header a').live('click',function(e){
 		

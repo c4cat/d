@@ -5,7 +5,7 @@
 	<h2>Pinterest automatic pinning queue</h2>
 	<br>
 	<?php $lastrun=get_option('wp_pinterest_last_run',1392146043); ?>
-	<p>Current server time is  <strong><?php echo date( 'h:i:s') ?></strong> , Cron last run at <strong><?php echo date("h:i:s",$lastrun ) ?></strong> this is <strong><?php echo $timdiff = time('now') - $lastrun ?></strong> seconds ago and it runs every <strong>60</strong> second to process one item from the queue so it should run again after <strong><?php echo( 60 - $timdiff )  ?></strong> seconds.  
+	<p>Current server time is  <strong><?php echo date( 'h:i:s') ?></strong> , Cron last run at <strong><?php echo date("h:i:s",$lastrun ) ?></strong> this is <strong><?php echo $timdiff = time('now') - $lastrun ?></strong> seconds ago and it runs every <strong>1000</strong> second to process one item from the queue so it should run again after <strong><?php echo( 1000 - $timdiff )  ?></strong> seconds.  
 	
 	<?php 
 	
@@ -70,7 +70,7 @@
 					'orderby' => 'meta_value_num',
 					'meta_key' => 'pin_try',
 					'order' => 'ASC',
-					'post_type' => 'any' ,
+					'post_type' => 'product' ,
 					'ignore_sticky_posts' => true	 
 			) );
 			
@@ -93,7 +93,7 @@
 									
 							) 
 					) ,
-					'post_type' => 'any' ,
+					'post_type' => 'product' ,
 					'ignore_sticky_posts' => true
 			) );
 			
@@ -135,7 +135,7 @@
 								'compare' => 'EXISTS' 
 						)
 				) ,
-				'post_type' => 'any' ,
+				'post_type' => 'product' ,
 				'ignore_sticky_posts' => true
 		) );
 		

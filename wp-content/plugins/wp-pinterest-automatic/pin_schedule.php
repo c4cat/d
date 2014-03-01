@@ -4,8 +4,8 @@ function wp_pinterest_automatic_once_a_minute($schedules) {
 	
 	// Adds once weekly to the existing schedules.
 	$schedules ['once_a_minute'] = array (
-			'interval' => 60,
-			'display' => __ ( 'Once a minute' ) 
+			'interval' => 1000,
+			'display' => __ ( 'Once 1000 seconds!!' ) 
 	);
 	return $schedules;
 }
@@ -60,7 +60,7 @@ function wp_pinterest_automatic_pin_function() {
 							
 					)
 			),
-			'post_type' => 'any' ,
+			'post_type' => 'product' ,
 			'ignore_sticky_posts' => true
 	) );
 	
@@ -196,7 +196,7 @@ function wp_pinterest_automatic_pin_function() {
 			'orderby' => 'meta_value_num',
 			'meta_key' => 'pin_try',
 			'order' => 'ASC',
-			'post_type' => 'any' ,
+			'post_type' => 'product' ,
 			'ignore_sticky_posts' => true
 	) );
 	
