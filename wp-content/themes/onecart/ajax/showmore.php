@@ -212,7 +212,7 @@ $(function(){
 	show_button_limit = '<?php echo ocart_get_option('max_grid_prods'); ?>';
 
 	$('.the-next').bind('click',function(){
-		$('.the-next').hide();
+		$('#the-pro').hide();
 		var distance = '<?php echo ocart_get_option('scroll_distance'); ?>';
 			if ($('.catalog_list>li').size() < products_count && canScroll == true) {
 				// add new results
@@ -232,16 +232,18 @@ $(function(){
 						// enable scroll again
 						canScroll = true;
 						// remove loader
-						$('.the-next').show();
+						$('#the-pro').show();
 					}
 				});
 			}
 		// }
 	});
 	$(window).scroll(function () {
+		$('.the-next').hide();
 		var distance = '<?php echo ocart_get_option('scroll_distance'); ?>';
 		if ($(window).scrollTop() + $(window).height() > $(document).height() - distance) {
 			if ($('.catalog_list>li').size() < products_count && canScroll == true && $('.catalog_list>li').size()/9%4>=1 ) {
+				// $('#the-pro').show();
 				// add new results
 				var taxonomies = '';
 				$('.filter ul a.selected').each( function() {
@@ -261,7 +263,9 @@ $(function(){
 					}
 				});
 			}else{
+				$('#the-pro').show();
 				$('.the-next').show();
+
 			}
 		}
 	});

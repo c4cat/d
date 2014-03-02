@@ -2026,6 +2026,7 @@ $(function() {
 	// 2014年3月1日16:52:06
 	// cornelia
 	$('#supermenu a').live('click',function(e){
+		$(this).find('span').html('');
 		$('#supermenu a').removeClass('selected');
 		e.preventDefault();
 
@@ -2047,7 +2048,8 @@ $(function() {
 		// get active taxonomies
 		var taxonomies = '';
 		$('#supermenu a.selected').each( function() {
-			name = $(this).html().toLowerCase();
+			name = $(this).text().toLowerCase();
+
 			name = 'product_category-'+ name
 			taxonomies = taxonomies + name + ',';
 			console.log(taxonomies);
@@ -2079,7 +2081,7 @@ $(function() {
 					// alert(123);
 				}
 		});
-		
+		$(this).find('span').html('▼');
 	});
 	// add end
 	//--------------------------------------------------------
