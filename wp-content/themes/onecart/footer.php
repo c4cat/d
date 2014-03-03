@@ -17,7 +17,7 @@
 	<div id="email-bg"></div>
 	<div id="email-content">
 		<div id="email-in">
-			<div id="closebtn"></div>
+			<!-- <div id="closebtn"></div> -->
 			<div id="email-logo"></div>
 			<p id="email-p">sign up to be the first to know about our exclusive offers, new arrivals and styling tips</p>
  			<form method="post" action="http://dress4club.com/wp-content/plugins/newsletter/do/subscribe.php" onsubmit="return newsletter_check(this)">
@@ -29,7 +29,7 @@
 					<tr>
 						<td class="newsletter-td-submit">
 							<input class="newsletter-submit" type="submit" value="SUBMIT">
-							<a href="javascript:void(0)" id="closebtn_">no thanks</a>
+							<!-- <a href="javascript:void(0)" id="closebtn_">no thanks</a> -->
 						</td>
 					</tr>
 				</tbody>

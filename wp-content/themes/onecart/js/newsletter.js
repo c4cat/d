@@ -16,11 +16,11 @@
      // if(num >= 24*3600000)//已经过期重新设置
      if(num >= 24*7200000)//已经过期重新设置
      {
-        document.cookie="showdiv=";
+     //   document.cookie="showdiv=";
      }
    }  
   $("#closebtn").click(function(){document.cookie="isshow=";$("#email-all").hide();});
-  $("#closebtn_").click(function(){document.cookie="isshow=true";$("#email-all").hide();});
+  $(".newsletter-submit").click(function(){document.cookie="isshow=true";$("#email-all").hide();});
   setTimeout("showdiv()",2000);
 }
 );

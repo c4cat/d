@@ -11,7 +11,7 @@ import sys,csv,re
 from bs4 import BeautifulSoup
 
 def getLink():
-	txtfile = open('Shoespie.txt','r')
+	txtfile = open('data/TBDress.txt','r')
 
 	shoes = ['Heels','Heel','Sandals','Sandal','Boots','Boot','Booties','Bootie','Wedges','Wedge','Flats','Flat','Pumps','Pump','Sneaker','Sneakers','Slipper']
 	dress = ['dress','Dress','Dresses','dresses','jumpsuit','jumpsuits','Skirts','Skirt','rompers','romper']
@@ -162,9 +162,9 @@ def createItem(a_title,a_id,a_price,a_old_price,arr_size,a_buylink,stock,a_type,
 
 	category = doc.createElement("category")
 	category.setAttribute("domain", "brand") 
-	category.setAttribute("nicename", "Shoespie") 
+	category.setAttribute("nicename", "TBDress") 
 	item.appendChild(category) 
-	cdata = doc.createCDATASection('Shoespie')
+	cdata = doc.createCDATASection('TBDress')
 	category.appendChild(cdata)
 
 	# category = doc.createElement("category")
