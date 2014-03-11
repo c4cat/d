@@ -144,7 +144,7 @@ foreach ($posts as $post): setup_postdata($post);
 							<li><iframe src="//www.facebook.com/plugins/like.php?href=<?php echo($link); ?>&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;" allowTransparency="true"></iframe></li>
 							<li><a target='_blank' href="//www.pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink($post->ID)); ?>&media=<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); echo urlencode($image[0]); ?>&description=<?php echo urlencode($post->post_title); ?>" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a></li>
 
-							<li><a href="javascript:lightbox(null, '<?php echo get_template_directory_uri(); ?>/ajax/product_lightbox.php', '', '<?php the_ID(); ?>', '<?php echo get_permalink($post->ID); ?>');" id='hover-a'>Details</a></li>
+							<li><a href="<?php the_permalink(); ?>" id='hover-a'>Details</a></li>
 						</ul>
 						</div>
 					</div>

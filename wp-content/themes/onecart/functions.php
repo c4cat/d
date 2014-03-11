@@ -451,7 +451,7 @@ show products catalog
 ************************************************************/
 function ocart_show_catalog() {
 	if (ocart_catalog_version() == 1) {
-		get_template_part('template','catalog');
+		get_template_part('template','catalog-v2');
 	} else {
 		get_template_part('template','catalog-v2');
 	}
@@ -4279,3 +4279,5 @@ function sneek_product_order_page() {
 }
 
 ?>
+
+

@@ -114,9 +114,9 @@ if (isset($_GET['use_saved_query']) && $_GET['use_saved_query'] == true) {
 	$args = $saved;
 } else {
 	if (isset($_GET['taxonomy']) && !empty($_GET['taxonomy'])) {
-	$args = array( 'post_type' => 'product', 'numberposts' => -1, $taxonomy => $slug );
+	$args = array( 'post_type' => 'product', 'numberposts' => 99, $taxonomy => $slug );
 	} else {
-	$args = array( 'post_type' => 'product', 'numberposts' => -1 );
+	$args = array( 'post_type' => 'product', 'numberposts' => 99 );
 	}
 	ocart_add_order_params($args);
 	global $args;
